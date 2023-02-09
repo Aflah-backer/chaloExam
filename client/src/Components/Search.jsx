@@ -21,14 +21,6 @@ const Search = () => {
   const [results, setResults] = useState([]);
   const [selected, setSelected] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-     
-    } catch (error) {
-      console.error(error);
-    }
-  };
   const handleDownload = () => {
     const pdf = new jsPDF("p", "pt", "letter");
     const pageHeight = pdf.internal.pageSize.height;
@@ -56,14 +48,15 @@ const Search = () => {
   };
 
   const submitSearchTerm = async (e) => {
-    if(!searchTerm == ""){
+    console.log(searchTerm)
+    if(searchTerm !== ""){
       const response = await axios.get(
         `http://localhost:5000/api/search?term=${searchTerm}`
       );
       setResults(response.data);
     }
   }
-
+console.log(results)
   return (
     <form>
       <Grid container direction="column" alignItems="center">
@@ -86,7 +79,6 @@ const Search = () => {
         <Grid item xs={12}>
           {results.map((file) => (
             <Container >
-
             <Paper key={file._id} className={classes.root}>
               <p>{file.filename}</p>
               <p>{file.content}</p>

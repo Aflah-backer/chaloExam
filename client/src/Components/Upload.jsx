@@ -38,7 +38,7 @@ function Upload() {
         >
           <input
             type="file"
-            accept=".docs"
+            accept=".docx"
             id="input-field"
             className="input-field"
             hidden
