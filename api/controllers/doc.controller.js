@@ -1,6 +1,5 @@
 import Doc from '../models/doc.model.js'
 
-
 export const uploaded = (req, res) => {
   const file = req.file;
 
