@@ -51,7 +51,7 @@ function Upload() {
                 <Box sx={{display:'flex',justifyContent:'center'}}>
               <MdCloudUpload color="#1475cf" size={60} />
                 </Box>
-              <p>Choose Your Docs File</p>
+              <p>Choose Your Docx File</p>
             </Box>
           )}
         </form>

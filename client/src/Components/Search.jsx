@@ -56,7 +56,6 @@ const Search = () => {
       setResults(response.data);
     }
   }
-console.log(results)
   return (
     <form>
       <Grid container direction="column" alignItems="center">
